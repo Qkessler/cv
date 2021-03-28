@@ -1,0 +1,11 @@
+[[https://github.com/marcodenisi/cv/actions][https://github.com/marcodenisi/cv/workflows/Build%20CV/badge.svg]]
+
+* Table of Contents
+** [[*Curriculum Vitae][Curriculum Vitae]]
+** [[*Built With][Built With]]
+** [[*Modify and Deploy][Modify and Deploy]]
+
+* Curriculum Vitae
+* Built With
+* Modify and Deploy
+
