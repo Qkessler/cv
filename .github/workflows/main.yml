@@ -1,0 +1,30 @@
+name: Build CV
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - 'v*.*.*'
+jobs:
+  release_cv:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout master
+      uses: actions/checkout@v1
+    - name: Compile CV
+      uses: xu-cheng/latex-action@master
+      with:
+        root_file: cv_EnriqueKesslerMartínez.tex
+    - name: Check pdf file
+      run: |
+        file cv_EnriqueKesslerMartínez.pdf | grep -q ' PDF '
+    - name: Create and upload release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: cv_EnriqueKesslerMartínez.pdf
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Upload to virtual env
+      uses: actions/upload-artifact@v1
+      with:
+        name: cv
+        path: cv_EnriqueKesslerMartínez.pdf
