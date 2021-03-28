@@ -68,7 +68,7 @@
   trigger the creation of a release by tagging the commit
 
   #+begin_src shell
-    git tag vX.Y.Z`  
+    git tag vX.Y.Z
   #+end_src
 
   and then pushing the tag
