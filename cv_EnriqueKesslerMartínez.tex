@@ -47,9 +47,11 @@
 \usepackage{hyperref}
 \catcode30=12
 % Change the colours if you want to
+%
 \definecolor{Mulberry}{HTML}{72243D}
 \definecolor{SlateGrey}{HTML}{2E2E2E}
 \definecolor{LightGrey}{HTML}{666666}
+\definecolor{links}{HTML}{A37785}
 \colorlet{heading}{Sepia}
 \colorlet{accent}{Mulberry}
 \colorlet{emphasis}{SlateGrey}
@@ -63,6 +65,12 @@
 %% sample.bib contains your publications
 %\addbibresource{sample.bib}
 
+% Defining the link styling.
+\hypersetup{
+    colorlinks=true,
+    urlcolor=links,
+  }
+  
 \begin{document}
 \name{Enrique Kessler Martínez}
 \tagline{Software Engineer}
@@ -70,12 +78,12 @@
 \personalinfo{%
   % Not all of these are required!
   % You can add your own with \printinfo{symbol}{detail}
-  \email{enrique.kesslerm@gmail.com}
-  % \phone{+34 629580643}
+  \email{\href{mailto:enrique.kesslerm@gmail.com}{enrique.kesslerm@gmail.com}}
+  \phone{+34 629580643}
   %\mailaddress{Via Don Rodrigo 7, Lecco, 23900, LC}
-  \homepage{www.enriquekesslerm.com}
-  \linkedin{linkedin.com/in/enrique-kessler-martinez}
-  \github{github.com/Qkessler}
+  \homepage{\href{https://enriquekesslerm.com}{enriquekesslerm.com}}
+  \linkedin{\href{https:://www.linkedin.com/in/enrique-kessler-martinez}{/enrique-kessler-martinez}}
+  \github{\href{https://github.com/Qkessler}{/Qkessler}}
   %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
   % \orcid{orcid.org/0000-0000-0000-0000}
 }
@@ -94,52 +102,36 @@
 %% \cvsection title in the "main" bar.
 \cvsection[page1sidebar]{Experience}
 
-\cvevent{Senior Software Engineer}{Klarna}{Jul 2020 -- Ongoing}{Milan}
+\cvevent{Technology and Computer Sales}{El Corte Inglés}{Dec 2019 -- June 2020}{Cartagena, Murcia}
 \begin{itemize}
-\item Improved credit underwriting rule creation providing a visual builder using VueJS and Python
-\item \textbf{Lead} the Italian Engineering Community
-\item \textbf{Interviewed} 50+ candidates
+\item Customer-facing.
+\item Team with \textbf{Microsoft Teams} workflow.
+\item \textbf{Contributed} to reach second place on the list of teams with more sales.
 \end{itemize}
 
-\divider
-
-\cvevent{Senior Software Engineer}{Sky Italia}{Jan 2019 -- Jul 2020}{Milan}
-\begin{itemize}
-\item Designed REST APIs using API-first approach with Swagger
-\item Created \textbf{lambda function} to collect and send logs to AWS Cloudwatch
-\item Took ownership of a new \textbf{SonarQube} flow
-\end{itemize}
-
-\divider
-
-\cvevent{Software Engineer}{Satispay}{Jan 2018 -- Dec 2018}{Milan}
-\begin{itemize}
-\item Introduced \textbf{Flyway} to put database schema under version control
-\item Implemented personal loans as a standalone \textbf{microservice}
-\item Used \textbf{Terraform} to automate the cloud infrastructure creation
-\end{itemize}
-\divider
-
-\cvevent{Software Engineer}{Open Reply}{May 2015 -- Dec 2017}{Milan/London}
-\begin{itemize}
-\item Engineered a report engine taking advantage of the Drools rule engine
-\item Redesigned \textbf{automation tests framework} reducing regression tests development time
-\item Boosted performances by introducing indexing with Apache Solr
-\end{itemize}
-
-\divider
-
-\cvevent{Software Engineer}{Advanced Business Solutions SRL}{Oct 2014 -- Apr 2015}{Milan}
-%\begin{itemize}
-%\item Developed SOAP web services using Axis2
-%\item Worked on CNHI Oracle Transportation Management customization using Oracle ADF
-%\item Created PL/SQL procedures and functions to implement new business workflows
-%\end{itemize}
+% \divider
 
 \cvsection{Projects}
 
-\cvevent{Gambe.ro}{\github{github.com/gambe-ro/lobsters-twitter-bot}}{}{}
-I'm an active contributor to the \textbf{\href{http://gambe.ro}{gambe.ro}} community. Currently, I've contributed to the Twitter and Telegram bots. Bots are written in Python.
+\cvevent{CloudQuestions}{Lead developer}{2020}{}
+CloudQuestions is a Django Web-App for studying which creates an easier customer experience for applying a mix between “Flash Cards” and “Active Recall” studying techniques. It was deployed to \textbf{Google Cloud}, configuring instances (Ubuntu 20.04) and DNS.
+
+\vspace{2mm}
+
+\textbf{Tech Stack}:
+\cvtag{Python3}
+\cvtag{Django}
+\cvtag{SQLite3}
+\cvtag{PostgreSQL}
+\cvtag{HTML5}
+\cvtag{CSS3}
+\cvtag{Twitter API}
+\cvtag{Facebook API}
+\cvtag{Google Calendar API}
+\cvtag{Git Flow}
+
+\github{\href{https://github.com/Qkessler/CloudQuestions}{/CloudQuestions}}\\
+\homepage{\href{https://www.cloudquestions.es}{www.cloudquestions.es}}
 
 \divider
 
