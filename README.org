@@ -1,4 +1,4 @@
-[[https://github.com/marcodenisi/cv/actions][https://github.com/marcodenisi/cv/workflows/Build%20CV/badge.svg]]
+[[https://github.com/Qkessler/cv/actions][https://github.com/marcodenisi/cv/workflows/Build%20CV/badge.svg]]
 
 * Table of Contents                                                     :TOC:QUOTE:
 #+BEGIN_QUOTE
