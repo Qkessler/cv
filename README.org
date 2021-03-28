@@ -1,13 +1,81 @@
-[[https://github.com/Qkessler/cv/actions][https://github.com/marcodenisi/cv/workflows/Build%20CV/badge.svg]]
+[[https://github.com/Qkessler/cv/actions/workflows/main.yml][https://github.com/Qkessler/cv/actions/workflows/main.yml/badge.svg?branch=main]]
 
 * Table of Contents                                                     :TOC:QUOTE:
 #+BEGIN_QUOTE
 - [[#curriculum-vitae][Curriculum Vitae]]
 - [[#built-with][Built With]]
+  - [[#latex][LaTeX]]
+  - [[#github-actions][Github Actions]]
 - [[#modify-and-deploy][Modify and Deploy]]
 #+END_QUOTE
 
 * Curriculum Vitae
-* Built With
-* Modify and Deploy
+  #+begin_quote
+  A curriculum vitae (English: /kəˈrɪkjʊləm ˈviːtaɪ, -ˈwiːtaɪ, -ˈvaɪtiː/),
+  Latin for "course of life", often shortened as CV or vita (genitive case,
+  vitae), is a written overview of someone's life's work (academic formation,
+  publications, qualifications, etc.). Vitae can be plural or possessive
+  (genitive case in Latin). Vitae often aim to be a complete record of someone's
+  career, and can be extensive, but they can be (depending on country) used in
+  the same way as a résumé, which is typically a brief 1–2 page summary of
+  qualifications and work experience for the purposes of employment, and often
+  only presents recent highlights. In many countries, a résumé is typically the
+  first item that a potential employer encounters regarding the job seeker and
+  is typically used to screen applicants, often followed by an interview. Vitae
+  may also be requested for applicants to postsecondary programs, scholarships,
+  grants and bursaries. In the 2010s it became popular for applicants to provide
+  an electronic text of their CV to employers using email, an online employment
+  website or using a job-oriented social-networking-service website, such as
+  LinkedIn.
+  #+end_quote
+  -- [[https://en.wikipedia.org/wiki/Curriculum_vitae][Wikipedia]].
 
+  This repo has been created to provide ease of updating and sharing my CV,
+  while having a cool continuous integration project to show.
+* Built With
+** LaTeX
+   I build all my CVs with [[https://www.latex-project.org/][LaTeX]], because I love the template usability and
+   the professionality of the results. In this case I changed my template to
+   use the [[https://github.com/liantze/AltaCV][AltaCV]] template, which allows for a lot of cool features like:
+   - Pie generator.
+   - Social media links.
+   - Side columns.
+
+   I find that the new side column trend for CVs is great, it allows to add
+   a lot more information while condensing the CV to one page if possible.
+
+** Github Actions
+   In order to provide continuous integration and ease of deployment I use
+   Github actions, being heavily inspired by the CV automation setup by
+   [[https://github.com/marcodenisi/cv][Marco Denisi]]. I love his idea to automate the CV deployment in tags.
+
+   This setup allows to share links like =releases/latest/cv_EnriqueKesslerMartínez.pdf=
+   which updates on every new release, not breaking any links.
+
+   The steps needed by Github to create and provide a new release are the following:
+   1. Checkout to the master branch.
+   2. Compiling the latex file with [[https://github.com/marketplace/actions/github-action-for-latex-with-mscgen][xu-cheng/latex-action@master]].
+   3. Check whether the pdf has been compiled correctly.
+      #+begin_src shell
+        file cv_EnriqueKesslerMartínez.pdf | grep -q ' PDF '
+      #+end_src
+   4. Create the new release with the tag pushed.
+   5. Upload the pdf to the virtual environment. This means in plan English: upload
+      the pdf file to the release.
+
+* Modify and Deploy
+  Once changes are committed and pushed to the remote repository, you can
+  trigger the creation of a release by tagging the commit
+
+  #+begin_src shell
+    git tag vX.Y.Z`  
+  #+end_src
+
+  and then pushing the tag
+
+  #+begin_src shell
+    git push origin vX.Y.Z
+  #+end_src
+
+  The Github Actions workflow (check [[file:.github/workflows/main.yml][.github/workflows/main.yml]]) will take care
+  of creating a new release.
