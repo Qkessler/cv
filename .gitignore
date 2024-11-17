@@ -1,6 +1,8 @@
 /*.aux
 /*.log
 /*.out
+/*.fls
+/*.fdb*
 /*.pdf
 /*.gz
 /auto/

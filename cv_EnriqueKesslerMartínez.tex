@@ -70,11 +70,10 @@
     colorlinks=true,
     urlcolor=links,
   }
-  
+
 \begin{document}
 \name{Enrique Kessler Martínez}
 \tagline{Software Engineer}
-%\photo{2.8cm}{}
 \personalinfo{%
   % Not all of these are required!
   % You can add your own with \printinfo{symbol}{detail}
@@ -83,8 +82,6 @@
   \homepage{\href{https://enriquekesslerm.com}{enriquekesslerm.com}}
   \linkedin{\href{https://www.linkedin.com/in/enrique-kessler-martinez}{/enrique-kessler-martinez}}
   \github{\href{https://github.com/Qkessler}{/Qkessler}}
-  %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
-  % \orcid{orcid.org/0000-0000-0000-0000}
 }
 
 %% Make the header extend all the way to the right, if you want.
@@ -93,90 +90,71 @@
 \end{fullwidth}
 
 %% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
-% \AtBeginEnvironment{itemize}{\small}
+\AtBeginEnvironment{itemize}{\small}
 
 %% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
 %% You can always just use \marginpar{...} if you do
 %% not need to align the top of the contents to any
 %% \cvsection title in the "main" bar.
-\cvsection[page1sidebar]{Experience}
+\cvsection[sidebar]{Experience}
 
-\cvevent{Technology and Computer Sales}{El Corte Inglés}{Dec 2019 -- June 2020}{Cartagena, Murcia}
+\cvevent{Software Development Engineer II}{Amazon}{Sept 2023 -- present}{Madrid, Spain}
 \begin{itemize}
-\item Customer-facing.
-\item Team with \textbf{Microsoft Teams} workflow.
-\item \textbf{Contributed} to reach second place on the list of teams with the most sales.
+  %% Add more here
+  \item Led the design and development of a Rust prototype for service optimization, \textbf{presented} at WebDevCon London 2024
+  \item Architected and implemented the integration of Amazon-specific authentication for Smithy-rs, enabling broader Rust adoption across the organization
+  \item Architected a service simplification initiative resulting in \textbf{58\% reduction in development effort} and \textbf{estimated 26-week engineering time savings}
+  \item Graduated as an \textbf{Amazon Correction Of Error (COE) Bar Raiser}
 \end{itemize}
-
-% \divider
-
-\cvsection{Projects}
-
-\cvevent{enriquekesslerm.com}{Lead developer}{Mar 2021 -- present}{}
-Using \textbf{Gatsby}, \textbf{Theme-UI} and deploying to \textbf{Gatsby Cloud}, I got my personal
-web up and running. You can find more information about the functionality
-implemented in the README file.
 
 \vspace{2mm}
 
 \textbf{Tech Stack}:
-\cvtag{Gatsby}
-\cvtag{Gatsby Cloud}
+\cvtag{AWS}
+\cvtag{Rust}
+\cvtag{Java}
+\cvtag{Kotlin}
+\cvtag{CDK}
+
+\vspace{4mm}
+
+\cvevent{Software Development Engineer I}{Amazon}{Feb 2022 -- Sept 2023}{Madrid, Spain}
+\begin{itemize}
+  \item Led multiple critical projects including a customer lifecycle marketing initiative that \textbf{increased volume by 14x} (from 259K to 3.61MM notifications) and \textbf{improved conversion by 10x} (from 7K to 72.2K units)
+  \item Designed and implemented volume management \textbf{experiments resulting in +\$2.7MM revenue impact} and improved customer engagement metrics with high statistical significance (PPR>80\%)
+  \item Spearheaded the modernization of a key customer-facing service handling 26M daily requests, \textbf{reducing infrastructure costs by 50\%} while maintaining service reliability
+  \item Improved developer productivity by creating testing frameworks and CLI tools, \textbf{reducing testing time by 92\% (from 40 to 3 minutes)}
+  \item Led technical documentation and mentored team members while being the \textbf{top contributor} with 141 code reviews (43\% of team total) and 245 peer review comments
+  \item \textbf{Presented} at WebDevCon New York 2023
+\end{itemize}
+
+\vspace{2mm}
+
+\textbf{Tech Stack}:
+\cvtag{AWS}
+\cvtag{Rust}
+\cvtag{Java}
+\cvtag{Kotlin}
+\cvtag{CDK}
+
+\vspace{4mm}
+
+\cvevent{Software Development Engineering Intern}{Amazon}{Jun 2021 -- Sept 2021}{Madrid, Spain}
+\begin{itemize}
+  \item Prepared \textbf{data pipeline} to feed an \textbf{AI model} created to predict customers' reading behaviour.
+  \item \textbf{Retrained} the AI model and performed validation on the predictions to reach a 99\% accuracy.
+  \item Presented visualization plots over the prediction scores and accuracy of the results.
+\end{itemize}
+
+\textbf{Tech Stack}:
+\cvtag{Python3}
+\cvtag{Spark}
 \cvtag{React}
 \cvtag{HTML5}
 \cvtag{CSS3}
 \cvtag{JavaScript}
 
-\vspace{2mm}
-
-\github{\href{https://github.com/Qkessler/enriquekesslerm.com}{/enriquekesslerm.com}}
-\homepage{\href{https://enriquekesslerm.com}{enriquekesslerm.com}}
-
 \divider
-
-\cvevent{AppMusic}{Project manager and Developer}{Sep 2020 -- Jan 2021}{}
-
-AppMusic is a \textbf{Maven} Desktop App created with functionality that allows
-for xml importing, and implemented with
-\href{https://github.com/Qkessler/AppMusic#patterns}{patterns} from
-the \textbf{GoF Design Patterns} book. Persistence was implemented with the
-\href{https://www.h2database.com/html/main.html}{H2 database engine}.
-
-\vspace{2mm}
-
-\textbf{Tech Stack}:
-\cvtag{H2 database engine}
-\cvtag{Swing}
-\cvtag{Java 11}\\
-\cvtag{GoF design patterns}
-
-\vspace{2mm}
-
-\github{\href{https://github.com/Qkessler/AppMusic}{/AppMusic}}
-
-\divider
-
-\cvevent{CloudQuestions web}{Lead developer}{Apr 2020 -- Sep 2020}{}
-CloudQuestions is a \textbf{Django} Web-App for studying which creates an easier customer experience applying a mix between “Flash Cards” and “Active Recall” studying techniques. It was deployed to \textbf{Google Cloud}, configuring instances (Ubuntu 20.04) and DNS.
-
-\vspace{2mm}
-
-\textbf{Tech Stack}:
-\cvtag{Python3}
-\cvtag{Django}
-\cvtag{SQLite3}
-\cvtag{PostgreSQL}
-\cvtag{HTML5}
-\cvtag{CSS3}
-\cvtag{Twitter API}
-\cvtag{Facebook API}
-\cvtag{Google Calendar API}\\
-\cvtag{Git Flow}
-
-\vspace{2mm}
-
-\github{\href{https://github.com/Qkessler/CloudQuestions}{/CloudQuestions}}
-\homepage{\href{https://www.cloudquestions.es}{www.cloudquestions.es}}
 
 \medskip
 
